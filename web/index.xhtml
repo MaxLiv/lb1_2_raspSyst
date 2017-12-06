@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="http://java.sun.com/jsf/html">
+<h:body>
+   <h:form>
+      <p:outputLabel value="Стандартные потоки"/>
+      <p:panelGrid columns="2">
+         <p:outputLabel value="a="/>
+         <p:inputText value="${threadBean.a}" />
+
+
+         <p:outputLabel value="b="/>
+         <p:inputText value="${threadBean.b}"/>
+
+
+         <p:outputLabel value="n="/>
+         <p:inputText value="${threadBean.n}"/>
+
+
+         <p:outputLabel value="threads="/>
+         <p:inputText value="${threadBean.totalThreads}" />
+
+         <p:outputLabel value="result="/>
+         <p:inputText value="${threadBean.total}" />
+
+         <p:outputLabel value="time="/>
+         <p:inputText value="${threadBean.time}" />
+
+         <p:commandButton value="Calculate" action="${threadBean.run()}"/>
+      </p:panelGrid>
+
+      <p:outputLabel value="Библиотека concurrent"/>
+      <p:panelGrid columns="2">
+         <p:outputLabel value="a="/>
+         <p:inputText value="${concBean.a}" />
+
+
+         <p:outputLabel value="b="/>
+         <p:inputText value="${concBean.b}"/>
+
+
+         <p:outputLabel value="n="/>
+         <p:inputText value="${concBean.n}"/>
+
+
+         <p:outputLabel value="threads="/>
+         <p:inputText value="${concBean.nThreads}" />
+
+         <p:outputLabel value="result="/>
+         <p:inputText value="${concBean.sum}" />
+
+         <p:outputLabel value="time="/>
+         <p:inputText value="${concBean.time}" />
+
+         <p:commandButton value="Calculate" action="${concBean.run()}"/>
+      </p:panelGrid>
+
+   </h:form>
+</h:body>
+</html>
